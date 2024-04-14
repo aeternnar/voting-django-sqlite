@@ -5,7 +5,9 @@
     <title>{{ question.question_text }}</title>
 </head>
 <body>
+{% load static %}
 
+<link rel="stylesheet" href="{% static 'polls/css/style.css' %}">
 <form action="{% url 'polls:vote' question.id %}" method="post">
 {% csrf_token %}
 <fieldset>

@@ -5,6 +5,9 @@
     <title>{{ question.question_text }}</title>
 </head>
 <body>
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'polls/css/style.css' %}">
 <h1>{{ question.question_text }}</h1>
 
 <ul>
